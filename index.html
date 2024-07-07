@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="ECCV 2024">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreestyleRet: Retrieving Images from Style-Diversified Queries</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!-- <script src="http://popcornjs.org/code/dist/popcorn-complete.js"></script> -->
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">FreestyleRet: Retrieving Images from Style-Diversified Queries</h1>
+          <div class="is-size-5 publication-authors">
+<!--             Hao Li, Yanhao Jia, Peng Jin, Zesen Cheng, Kehan Li, Jialu Sui, Chang Liu, Li Yuan.
+            Peking University & Peng Cheng Laboratory & Nanyang Technological University & Agency for Science, Technology and Research & Tsinghua University & Chinese University of Hong Kong, Shenzhen
+ -->            
+            <span class="author-block ">
+              <a href="https://scholar.google.com/citations?user=y4va91AAAAAJ&hl=en">Hao Li</a><sup>*,1,2</sup>,
+              <a href="https://curisejia.github.io/">Yanhao Jia</a><sup>*,3,4</sup>,
+              <a href="https://jpthu17.github.io/">Peng Jin</a><sup>1</sup>,
+              <a href="https://scholar.google.com/citations?user=Jkkp8JAAAAAJ&hl=en">Zesen Cheng</a><sup>1</sup>,
+              <a href="https://ye-yuan.com/">Kehan Li</a><sup>1</sup>,
+              <a href="https://scholar.google.com/citations?user=S--vtB8AAAAJ&hl=en&oi=ao">Jialu Sui</a><sup>6</sup>,
+              <a href="https://research.nvidia.com/person/charles-loop">Chang Liu</a><sup>5</sup>,
+              <a href="https://yuanli2333.github.io/">Li Yuan</a><sup>1,2</sup>,
+            </span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>School of Electronic and Computer Engineering, Peking University Shenzhen Graduate School</span> &
+            <span class="author-block"><sup>2</sup>Peng Cheng Laboratory, Shenzhen</span> &
+            <span class="author-block"><sup>1</sup>College of Computing and Data Science, Nanyang Technological University, Singapore</span> &
+            <span class="author-block"><sup>2</sup>Deep NeuroCognition Lab, I2R and CFAR, Agency for Science, Technology and Research, Singapore</span> &
+            <span class="author-block"><sup>1</sup>Department of Automation and BNRist, Tsinghua University</span> &
+            <span class="author-block"><sup>2</sup>School of Science and Engineering, Chinese University of Hong Kong, Shenzhen</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.02428"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/Curise/FreeStyleRet-DSR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/CuriseJia/FreeStyleRet"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Code Link. -->
+<!--               <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+ -->              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Image Retrieval aims to retrieve corresponding images based on a given query. In application scenarios, users intend to express their retrieval intent through various query styles. However, current retrieval tasks predominantly focus on text-query retrieval exploration, leading to limited retrieval query options and potential ambiguity or bias in user intention. In this paper, we propose the Style-Diversified Query-Based Image Retrieval task, which enables retrieval based on various query styles. To facilitate the novel setting, we propose the first Diverse-Style Retrieval dataset, encompassing diverse query styles including text, sketch, low-resolution, and art. We also propose a light-weighted style-diversified retrieval framework. For various query style inputs, we apply the Gram Matrix to extract the query's textural features and cluster them into a style space with style-specific bases. Then we employ the style-init prompt learning module to enable the visual encoder to comprehend the texture and style information of the query. Experiments demonstrate that our model, employing the style-init prompt tuning strategy, outperforms existing retrieval models on the style-diversified retrieval task. Moreover, style-diversified queries~(sketch+text, art+text, etc) can be simultaneously retrieved in our model. The auxiliary information from other queries enhances the performance within the respective query, which may hold potential significance for the community.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{jia2024eccv:freestyleret,
+  author = "Hao Li and Yanhao Jia and Peng Jin and Zesen Cheng and Kehan Li and Jialu Sui and Chang Liu and Li Yuan",
+  title = "FreestyleRet: Retrieving Images from Style-Diversified Queries",
+  booktitle = "ECCV",
+  year = 2024
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website taken from 
+              <a href="https://github.com/CuriseJia/freestyleret.github.io">here</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
